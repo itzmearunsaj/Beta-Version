@@ -18,12 +18,12 @@
                         user.signUp(null, {
                             success: function (user) {
                                 if (results[0].attributes["Type"] === "T") {
-                                    location.href = "/TeachersHome.html";
+                                    location.href = "/MyClasses.html";
                                 } else if (results[0].attributes["Type"] === "A") {
-                                    location.href = "/AddUsers.html";
+                                    location.href = "/AdminHome.html";
                                 }
                                 else {
-                                    location.href = "MyClasses.html";
+                                    location.href = "/StudentsHome.html";
                                 }
 
                                 // Hooray! Let them use the app now.
