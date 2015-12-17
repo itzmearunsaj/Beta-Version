@@ -2,7 +2,7 @@
     Parse.$ = jQuery;
 
     // Initialize Parse with your Parse application javascript keys
-    //Parse.initialize("UIX2yWbJR0BBg4sUvxTkFracFjlaXt4q4Ee18whZ", "odtjY02VHcst6CVS2OPxEGSfwpQPmykHQeBFpACu");
+    Parse.initialize("UIX2yWbJR0BBg4sUvxTkFracFjlaXt4q4Ee18whZ", "odtjY02VHcst6CVS2OPxEGSfwpQPmykHQeBFpACu");
 
     $("#btnLogin").click(function () {
         var user = new Parse.User();
@@ -25,12 +25,12 @@
                     success: function (results) {
                         if (results.length > 0) {
                             if (results[0].attributes["Type"] === "T") {
-                                location.href = "/TeachersHome.html";
+                                location.href = "/MyClasses.html";
                             } else if (results[0].attributes["Type"] === "A") {
-                                location.href = "/AddUsers.html";
+                                location.href = "/AdminHome.html";
                             }
                             else {
-                                location.href = "StudentHome.html";
+                                location.href = "StudentsHome.html";
                             }
                         }
                     }

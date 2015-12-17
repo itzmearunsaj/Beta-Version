@@ -23,7 +23,7 @@
                                     location.href = "/AddUsers.html";
                                 }
                                 else {
-                                    location.href = "StudentHome.html";
+                                    location.href = "MyClasses.html";
                                 }
 
                                 // Hooray! Let them use the app now.

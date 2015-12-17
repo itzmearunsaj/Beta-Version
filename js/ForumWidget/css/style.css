@@ -59,12 +59,13 @@ body {
 }
 
 .chat {
-  width: 775px;
+  width: 1035px;
   float: left;
   background: #F2F5F8;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #434651;
+  border-radius:5px;
 }
 .chat .chat-header {
   padding: 20px;
@@ -138,7 +139,7 @@ body {
   left: 93%;
 }
 .chat .chat-message {
-  padding: 30px;
+  padding: 32px;
 }
 .chat .chat-message textarea {
   width: 100%;
