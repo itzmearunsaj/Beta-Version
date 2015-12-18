@@ -101,6 +101,7 @@
                                 toastr.error("Error");
                             }
                         });
+                        setLikeButtonStatus();
                     }
                 } else {
                     addNewLike();
@@ -113,19 +114,26 @@
         var exApUsers = Parse.Object.extend("Likes");
         var classQuery = new Parse.Query(exApUsers);
         classQuery.equalTo("classID", classID);
-        classQuery.equalTo("userID", userName);
+        //classQuery.equalTo("userID", userName);
         classQuery.find({
             success: function (c) {
                 if (c.length > 0) {
+
+                var likeStatus =    jQuery.grep(c, function (n, i) {
+                    return (n.attributes.userID === userName);
+                });
+                var youString = "";
+                if (likeStatus.length > 0) {
+                    if (likeStatus[0].attributes.like === "true") {
+                        youString = "(You and ";
+                        $("#btnLike").text("UnLike");
+                    } else {
+                        $("#btnLike").text("Like");
+                        youString = "(";
+                    }
+                }
                     if (c.length > 0) {
-                        debugger;
-                        var buttontext = "";
-                        if (c[0].attributes.like === "true") {
-                            $("#btnLike").text("UnLike");
-                        } else {
-                            $("#btnLike").text("Like");
-                        }
-                                               
+                        $("#likeInfo").text(youString + c.length + " other(s) like this post)");
                     }
                 } 
             }

@@ -2,7 +2,7 @@
     Parse.$ = jQuery;
 
     // Initialize Parse with your Parse application javascript keys
-    Parse.initialize("UIX2yWbJR0BBg4sUvxTkFracFjlaXt4q4Ee18whZ", "odtjY02VHcst6CVS2OPxEGSfwpQPmykHQeBFpACu");
+    Parse.initialize("pkN9vyCFUt0vSrHpr6FuvUJht48RQBboZZ9hhcME", "H1uDONVucpBVvNTkfYfh7GnrcwPtEU1x2ynJfYJX");
 
     $("#btnLogin").click(function () {
         var user = new Parse.User();
@@ -30,7 +30,7 @@
                                 location.href = "/AdminHome.html";
                             }
                             else {
-                                location.href = "StudentsHome.html";
+                                location.href = "/StudentsHome.html";
                             }
                         }
                     }

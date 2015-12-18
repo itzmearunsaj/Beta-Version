@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     Parse.$ = jQuery;
-
+    Parse.initialize("pkN9vyCFUt0vSrHpr6FuvUJht48RQBboZZ9hhcME", "H1uDONVucpBVvNTkfYfh7GnrcwPtEU1x2ynJfYJX");
     $("#btnSubmit").click(function () {
         if (validateForm()) {
 
@@ -23,7 +23,7 @@
                                     location.href = "/AdminHome.html";
                                 }
                                 else {
-                                    location.href = "/StudentsHome.html";
+                                    location.href = "StudentsHome.html";
                                 }
 
                                 // Hooray! Let them use the app now.
